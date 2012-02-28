@@ -1,11 +1,13 @@
 <h1>List of Chemicals</h1>
 
-<% form_tag chemicals_path, :method => 'get' do %>
+<%= form_tag chemicals_path, :method => 'get' do %>
   <p>
-	<%= text_field_tag :search, params[:search] %>
-	<%= submit_tag "Search", :name => nil %>
+	<%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag("Search by name", :name => nil) %>
   </p>
 <% end %>
+
 		
 <table>
   <tr>

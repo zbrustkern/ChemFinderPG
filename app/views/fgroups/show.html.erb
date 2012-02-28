@@ -5,6 +5,12 @@
   <%= @fgroup.name %>
 </p>
 
+<p>
+  <b>Chemicals:</b>
+  <%= @fgroup.chemicals.each do |chemical| %>
+	<li><%= link_to chemical.name, chemical %></li>
+  <% end %>
+</p>	
 
 <%= link_to 'Edit', edit_fgroup_path(@fgroup) %> |
 <%= link_to 'Back', fgroups_path %>
