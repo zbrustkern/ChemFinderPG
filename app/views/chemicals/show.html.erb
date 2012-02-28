@@ -12,7 +12,7 @@
 
 <p>
   <b>Functional Groups:</b>
-  <%= @chemical.fgroups.each do |fgroup| %>
+  <% @chemical.fgroups.each do |fgroup| %>
 	<li>
 	<%= link_to fgroup.name, fgroup %></td> 
 	</li>
