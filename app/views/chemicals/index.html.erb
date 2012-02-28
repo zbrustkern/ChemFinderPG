@@ -1,0 +1,35 @@
+<h1>List of Chemicals</h1>
+
+<% form_tag chemicals_path, :method => 'get' do %>
+  <p>
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+		
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Casnum</th>
+    <th>Location</th>
+    <th>Quantity</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @chemicals.each do |chemical| %>
+  <tr>
+    <td><%= link_to chemical.name, chemical %></td>
+    <td><%= chemical.casnum %></td>
+    <td><%= chemical.location %></td>
+    <td><%= chemical.quantity %></td>
+    <td><%= link_to 'Edit', edit_chemical_path(chemical) %></td>
+    <td><%= link_to 'Destroy', chemical, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Chemical', new_chemical_path %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @chemical.name %>
+</p>
+
+<p>
+  <b>CAS number:</b>
+  <%= @chemical.casnum %>
+</p>
+
+<p>
+  <b>Functional Groups:</b>
+  <%= @chemical.fgroups.each do |fgroup| %>
+	<li>
+	<%= link_to fgroup.name, fgroup %></td> 
+	</li>
+  <% end %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @chemical.location %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @chemical.quantity %>
+</p>
+
+
+<%= link_to 'Edit', edit_chemical_path(@chemical) %> |
+<%= link_to 'Back', chemicals_path %>

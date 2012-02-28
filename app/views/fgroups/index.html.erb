@@ -1,0 +1,23 @@
+<h1>Listing Functional Groups</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fgroups.each do |fgroup| %>
+  <tr>
+    <td><%= fgroup.name %></td>
+    <td><%= link_to 'Show', fgroup %></td>
+    <td><%= link_to 'Edit', edit_fgroup_path(fgroup) %></td>
+    <td><%= link_to 'Destroy', fgroup, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New functional group', new_fgroup_path %>
