@@ -20,13 +20,14 @@
     <%= f.text_field :casnum %>
   </div>
   <p>
+	Functional Groups:
 	<% for fgroup in Fgroup.find(:all) %>
 	<div>
 		<%= check_box_tag "chemical[fgroup_ids][]", fgroup.id, @chemical.fgroups.include?(fgroup) %>
 		<%= fgroup.name %>
 	</div>
 	<% end %>
-  </p>
+  </p> 	
 
   <div class="field">
     <%= f.label :location %><br />

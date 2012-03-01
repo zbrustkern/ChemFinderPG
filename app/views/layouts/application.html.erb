@@ -6,10 +6,17 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body style="background: #822222;">
-<%= link_to(image_tag("mitlogo.gif", :alt => "mitlogo", :title => "Home"), "/") %>
+<body style="background: #333399;">
+<h2>
+<%= link_to(image_tag("mitlogo.gif", :alt => "mitlogo", :title => "Home"), "/")%>
+ChemFinderTwo
+</h2>
 
-<%= yield %>
-
+<div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, id: "flash_#{name}" %>
+      <% end %>
+      <%= yield %>
+    </div>
 </body>
 </html>

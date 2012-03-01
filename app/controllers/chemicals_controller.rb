@@ -44,7 +44,7 @@ class ChemicalsController < ApplicationController
 
     respond_to do |format|
       if @chemical.save
-        format.html { redirect_to @chemical, notice: 'Chemical was successfully created.' }
+        format.html { redirect_to @chemical , notice: 'Chemical was successfully created.' }
         format.json { render json: @chemical, status: :created, location: @chemical }
       else
         format.html { render action: "new" }

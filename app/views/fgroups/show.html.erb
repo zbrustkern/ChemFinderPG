@@ -7,8 +7,10 @@
 
 <p>
   <b>Chemicals:</b>
-  <%= @fgroup.chemicals.each do |chemical| %>
-	<li><%= link_to chemical.name, chemical %></li>
+  <% @fgroup.chemicals.each do |chemical| %>
+	<li>
+	<%= link_to chemical.name, chemical %>
+	</li>
   <% end %>
 </p>	
 
