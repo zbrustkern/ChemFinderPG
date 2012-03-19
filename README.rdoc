@@ -1,4 +1,6 @@
-Welcome to ChemFinder!
+Welcome to ChemFinderPG!
+
+As a note, this is meant to mirror the standard version, but provide a separate and entirely segregated version control, as well as simply because I struggled with my Heroku deployment initially, and continued to develop and ran into database issues, so now I have two apps.  That is entirely separate from the issues that spawned the whole ChemFinderTwo debacle... that was learning how to use git properly.  So with each version comes new skills, that now include some SQLite3, PostgreSQL, Git, Heroku (kinda/sorta), and more!
 
 This is a project designed for two purposes:
 
