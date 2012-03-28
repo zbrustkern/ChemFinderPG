@@ -1,4 +1,5 @@
 ChemFinderTwo::Application.routes.draw do
+  
   resources :user_sessions
 
   resources :users
@@ -9,7 +10,7 @@ ChemFinderTwo::Application.routes.draw do
 
   resources :chemicals
   
-  match "login", :to => 'user_sessions#new', :as => 'login'
+  match 'login', :to => 'user_sessions#new', :as => 'login'
   
   match 'logout', :to => 'usersessions#destroy', :as => 'logout'
   
